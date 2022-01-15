@@ -1,30 +1,12 @@
--- Neovim API aliases
-local fn = vim.fn
-local g = vim.g
 local opt = vim.opt
+local g = vim.g
 local cmd = vim.cmd
-local map = vim.api.nvim_set_keymap
-
--- Plugins
-local Plug = fn['plug#']
-
-vim.call('plug#begin', '~/.config/nvim/plugged')
-
-Plug 'github/copilot.vim'
-Plug 'ojroques/nvim-hardline'
-Plug 'andweeb/presence.nvim'
-Plug 'preservim/nerdtree'
-Plug 'ms-jpq/chadtree'
-
-vim.call('plug#end')
-
--- Keybindings
-map('n', '<C-f>', ':CHADopen<CR>', { noremap = true })
 
 -- General Settings
+g.python3_host_prog = 'python3'
 opt.mouse = 'a'
 opt.swapfile = false
-g.python3_host_prog = 'python3'
+opt.clipboard = 'unnamedplus'
 
 -- Disable unwanted providers
 g.loaded_python_provider = 0
@@ -44,15 +26,6 @@ opt.history = 100
 opt.lazyredraw = true
 opt.synmaxcol = 240
 
--- Enable hardline
-require('hardline').setup {}
-
--- Set up presence
-require("presence"):setup({
-    -- General options
-    auto_update         = true,
-    enable_line_number  = true,
-})
 
 -- Disable unwanted plugins
 local disabled_built_ins = {
