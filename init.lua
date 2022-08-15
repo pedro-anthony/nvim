@@ -10,7 +10,9 @@ local Plug = fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
 Plug 'github/copilot.vim'
-Plug 'ojroques/nvim-hardline'
+--Plug 'ojroques/nvim-hardline'
+-- trying out vim-airline
+Plug 'vim-airline/vim-airline'
 Plug 'andweeb/presence.nvim'
 Plug 'preservim/nerdtree'
 Plug 'ms-jpq/chadtree'
@@ -23,8 +25,8 @@ require('keybinds')
 -- Grab settings
 require('settings')
 
--- Enable hardline
-require('hardline').setup {}
+-- Enable hardline (not in use)
+-- require('hardline').setup {}
 
 -- Set up presence
 require("presence"):setup({
