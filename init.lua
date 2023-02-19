@@ -16,6 +16,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'andweeb/presence.nvim'
 Plug 'preservim/nerdtree'
 Plug 'ms-jpq/chadtree'
+Plug 'lambdalisue/suda.vim'
 
 vim.call('plug#end')
 

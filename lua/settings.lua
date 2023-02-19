@@ -56,5 +56,8 @@ end
 -- Disable split bar background
 cmd[[highlight VertSplit cterm=NONE]]
 
+-- Enable smart editing (suda)
+g.suda_smart_edit = 1
+
 -- Disable nvim intro
 opt.shortmess:append "sI"
