@@ -29,6 +29,8 @@ require('settings')
 -- Enable hardline (not in use)
 -- require('hardline').setup {}
 
+vim.cmd([[au VimLeave * set guicursor=a:ver100-blinkon01]])
+
 -- Set up presence
 require("presence"):setup({
     -- General options
